@@ -1,15 +1,28 @@
+/*
+    Writen by: Oscar Bergström
+    https://github.com/OSCARJFB
+*/
+
 #pragma once
 
 class board
 {
 public:
-    static constexpr int height = 20; 
-    static constexpr int width = 10; 
+    static constexpr int board_height = 20; 
+    static constexpr int board_width= 20; 
     
-    char gameBoard[height][width];
+    char gameBoard[board_height][board_width];
 
     board(void); 
     void printBoard(void); 
 private: 
+    enum border
+    {
+        Top = 0,
+        Bottom = board_height - 1,
+        Left = 0,
+        Right = board_width - 2,
+        newline = board_width - 1,
+    };
 
 };
