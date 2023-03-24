@@ -7,15 +7,10 @@
 
 class board
 {
-public:
-    static constexpr int board_height = 20; 
-    static constexpr int board_width= 20; 
-    
-    char gameBoard[board_height][board_width];
+private:
+    static constexpr int board_height = 20;
+    static constexpr int board_width = 20;
 
-    board(void); 
-    void printBoard(void); 
-private: 
     enum border
     {
         Top = 0,
@@ -25,4 +20,9 @@ private:
         newline = board_width - 1,
     };
 
+public:
+    char gameBoard[board_height][board_width];
+
+    board(void);
+    void printBoard(void);
 };
