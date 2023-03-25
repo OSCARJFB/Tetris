@@ -11,12 +11,9 @@
 int main(void)
 {
     board newBoard; 
+    tetrimino newTetrimino(1); 
+    newBoard.updateBoard(newTetrimino.tetriminoPiece); 
     newBoard.printBoard(); 
-    
-    std::unique_ptr<tetrimino> ST(new tetrimino(1));
-    std::unique_ptr<tetrimino> SQ(new tetrimino(2));
-    std::unique_ptr<tetrimino> T(new tetrimino(3));
-    std::unique_ptr<tetrimino> SK(new tetrimino(4));
 
     return 0; 
 }
