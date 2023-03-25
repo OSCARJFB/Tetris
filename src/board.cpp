@@ -45,3 +45,14 @@ void board::printBoard(void)
         }
     }
 }
+
+void board::updateBoard(char tetriminoPiece[4][2])
+{
+    gameBoard[tetriminoPiece[0][1]][tetriminoPiece[0][0]] = 'X';
+
+    gameBoard[tetriminoPiece[1][1]][tetriminoPiece[1][0]] = 'X';
+
+    gameBoard[tetriminoPiece[2][1]][tetriminoPiece[2][0]] = 'X';
+
+    gameBoard[tetriminoPiece[3][1]][tetriminoPiece[3][0]] = 'X';
+}

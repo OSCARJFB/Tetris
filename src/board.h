@@ -2,8 +2,8 @@
     Writen by: Oscar Bergström
     https://github.com/OSCARJFB
 */
-
 #pragma once
+#include "tetrimino.h"
 
 class board
 {
@@ -23,6 +23,7 @@ private:
 public:
     char gameBoard[board_height][board_width];
 
-    board(void);
+    board();
     void printBoard(void);
+    void updateBoard(char tetriminoPiece[4][2]); 
 };
