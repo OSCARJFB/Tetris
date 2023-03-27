@@ -1,7 +1,7 @@
 # Writen by: Oscar Bergström
 # https://github.com/OSCARJFB
 
-main: main.cpp board.cpp tetrimino.cpp rotation.cpp
-	g++ main.cpp board.cpp tetrimino.cpp rotation.cpp -o tetris.o 
+main: main.cpp
+	g++ main.cpp board.cpp tetrimino.cpp rotation.cpp gameLoop.cpp -lncurses -o tetris.o 
 clean:
 	rm -rf *.o
