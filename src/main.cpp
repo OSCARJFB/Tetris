@@ -3,17 +3,10 @@
     https://github.com/OSCARJFB
 */
 
-#include <iostream>
-#include <memory>
-#include "board.h"
-#include "tetrimino.h"
+#include "gameLoop.h"
 
 int main(void)
 {
-    board newBoard; 
-    tetrimino newTetrimino(1); 
-    newBoard.updateBoard(newTetrimino.tetriminoPiece); 
-    newBoard.printBoard(); 
-
+    runGame(); 
     return 0; 
 }
