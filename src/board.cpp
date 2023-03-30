@@ -48,11 +48,30 @@ void board::printBoard(void)
 
 void board::updateBoard(char tetriminoPiece[4][2])
 {
-    gameBoard[tetriminoPiece[0][1]][tetriminoPiece[0][0]] = 'X';
-
-    gameBoard[tetriminoPiece[1][1]][tetriminoPiece[1][0]] = 'X';
-
-    gameBoard[tetriminoPiece[2][1]][tetriminoPiece[2][0]] = 'X';
-
-    gameBoard[tetriminoPiece[3][1]][tetriminoPiece[3][0]] = 'X';
+    for(int i = 0; i < board_height; ++i)
+    {
+        for(int j = 0; j < board_width; ++j)
+        {
+            if(i == tetriminoPiece[0][1] && j == tetriminoPiece[0][0])
+            {
+                gameBoard[i][j] == 'X';
+                break;
+            }
+            else if(i == tetriminoPiece[1][1] && j == tetriminoPiece[1][0])
+            {
+                gameBoard[i][j] == 'X';
+                break;
+            }
+            else if(i == tetriminoPiece[2][1] && j == tetriminoPiece[2][0])
+            {
+                gameBoard[i][j] == 'X';
+                break;
+            }
+            else if (i == tetriminoPiece[3][1] && j == tetriminoPiece[3][0])
+            {
+                gameBoard[i][j] == 'X';
+                break;
+            }
+        }
+    }
 }
