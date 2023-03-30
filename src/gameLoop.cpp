@@ -4,19 +4,22 @@
 */
 
 #include <iostream>
-#include <termio.h>
 #include "board.h"
+#include "kbhit.h"
 
 #define ESC 27
 
 void runGame(void)
 {
     board newBoard;
-    bool isRunning = true;
-    while (isRunning)
+    kbhit keyHit;
+
+    tetrimino newTetrimino(1);
+    while (keyHit._kbhit() != ESC)
     {
-        tetrimino newTetrimino(1);
-        newBoard.updateBoard(newTetrimino.tetriminoPiece);
+
+        newBoard.updateBoard(newTetrimino.rotMode2);
         newBoard.printBoard();
+        system("clear");
     }
 }

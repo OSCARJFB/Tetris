@@ -2,6 +2,7 @@
     Writen by: Oscar Bergström
     https://github.com/OSCARJFB
 */
+
 #pragma once
 #include <random>
 
@@ -28,7 +29,8 @@ private:
     int randomGenerator(int min_range, int max_range);
 
 public:
-    char tetriminoPiece[tetra][xy];
+    char rotMode1[tetra][xy];
+    char rotMode2[tetra][xy];
 
     tetrimino(int type);
 };
